@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Typewriter from 'typewriter-effect';
 import "./StartScreen.css";
 
 const StartScreen = () => {
@@ -10,8 +11,22 @@ const StartScreen = () => {
   };
 
   return (
+    <div className="fullpage">
     <div className="container">
-      <h1 className="title">Welcome to the Game!</h1>
+      {/* <h1 className="title">Welcome to the Game!</h1> */}
+
+
+    <div className="title">
+  <Typewriter
+    options={{
+      strings: ['Welcome to the Game!'],
+      autoStart: true,
+      loop: true,
+    }}
+  />
+</div>
+
+
       <p className="subtitle">Select your difficulty level to start:</p>
       <div className="buttonContainer">
         <button
@@ -33,6 +48,7 @@ const StartScreen = () => {
           Hard
         </button>
       </div>
+    </div>
     </div>
   );
 };
